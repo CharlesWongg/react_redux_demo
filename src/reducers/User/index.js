@@ -1,18 +1,18 @@
 import * as types from '../../constants/ActionTypes';
 
 const initialState = {
-	message: ''
+	users: []
 }
 
-export default function aboutInfo (state = initialState, action) {
+export default function userInfo (state = initialState, action) {
 	switch(action.type) {
-		case types.SET_MSG:
+		case types.SET_USER:
 			// return Object.assign({}, state, {
 			// 	message: action.data.message
 			// })
 			return {
 				...state,
-				message: action.data.message
+				users: action.data.users
 			}
 		default:
 			return state;
